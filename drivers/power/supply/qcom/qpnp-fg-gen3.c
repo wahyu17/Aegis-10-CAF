@@ -24,6 +24,10 @@
 #include "fg-reg.h"
 #include <linux/qpnp/qpnp-adc.h>
 
+//Huaqin add by tangqingyong at 2017/02/02 start
+#include <linux/switch.h>
+//Huaqin add by tangqingyong at 2017/02/02 end
+
 #define FG_GEN3_DEV_NAME	"qcom,fg-gen3"
 
 #define PERPH_SUBTYPE_REG		0x05
