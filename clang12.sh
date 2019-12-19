@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 export KBUILD_BUILD_USER="Wahyu"
-export KBUILD_BUILD_HOST="Aegis-Build"
+export KBUILD_BUILD_HOST="TeamXobod"
 export ARCH=arm64
 
 make O=out ARCH=arm64 aegis_defconfig
 
-PATH="/home/wahyu/proton/bin:/home/wahyu/gcc49/bin:${PATH}" \
-                            LD_LIBRARY_PATH="/home/wahyu/proton/lib:${LD_LIBRARY_PATH}" \
+PATH="/home/yunno/proton/bin:/home/yunno/49/bin:${PATH}" \
+                            LD_LIBRARY_PATH="/home/yunno/proton/lib:${LD_LIBRARY_PATH}" \
                             make -j$(nproc --all) O=out \
                             CC=clang-13 \
                             CROSS_COMPILE=aarch64-linux-android- \
