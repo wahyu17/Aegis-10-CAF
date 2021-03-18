@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 export KBUILD_BUILD_USER="Wahyu"
-export KBUILD_BUILD_HOST="Aegis-Build"
+export KBUILD_BUILD_HOST="TeamXobod"
 export ARCH=arm64
 
 make O=out ARCH=arm64 aegis_defconfig
 
-PATH="/home/wahyu/project/proton/bin:/home/wahyu/project/gcc/bin:${PATH}" \
-                            LD_LIBRARY_PATH="/home/wahyu/project/proton/lib:${LD_LIBRARY_PATH}" \
+PATH="/home/wahyu/proton-clang/bin:${PATH}" \
                             make -j$(nproc --all) O=out \
-                 	    CROSS_COMPILE=aarch64-linux-gnu- \
-                            CC=clang \
+			    CROSS_COMPILE=aarch64-linux-gnu- \
+                            CC=clang-13 \
                             AR=llvm-ar \
                             AS=llvm-as \
                             NM=llvm-nm \
@@ -23,3 +22,4 @@ PATH="/home/wahyu/project/proton/bin:/home/wahyu/project/gcc/bin:${PATH}" \
                             HOSTAR=llvm-ar \
                             CLANG_TRIPLE=aarch64-linux-gnu- \
                             2>&1 | tee log.jancok
+© 2021 GitHub, Inc.
