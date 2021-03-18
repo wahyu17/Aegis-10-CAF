@@ -5,12 +5,10 @@ export ARCH=arm64
 
 make O=out ARCH=arm64 aegis_defconfig
 
-PATH="/home/yunno/proton/bin:/home/yunno/49/bin:${PATH}" \
-                            LD_LIBRARY_PATH="/home/yunno/proton/lib:${LD_LIBRARY_PATH}" \
+PATH="/home/wahyu/proton/bin:${PATH}" \
                             make -j$(nproc --all) O=out \
-                            CC=clang-13 \
+                            CC=clang \
                             CROSS_COMPILE=aarch64-linux-android- \
-                            CROSS_COMPILE_ARM32=arm-linux-androideabi- \
                             AR=llvm-ar \
                             AS=llvm-as \
                             NM=llvm-nm \
