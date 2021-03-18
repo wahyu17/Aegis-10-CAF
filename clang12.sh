@@ -7,8 +7,8 @@ make O=out ARCH=arm64 aegis_defconfig
 
 PATH="/home/wahyu/proton/bin:${PATH}" \
                             make -j$(nproc --all) O=out \
+			    CROSS_COMPILE=aarch64-linux-gnu- \
                             CC=clang \
-                            CROSS_COMPILE=aarch64-linux-android- \
                             AR=llvm-ar \
                             AS=llvm-as \
                             NM=llvm-nm \
