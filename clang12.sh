@@ -8,7 +8,7 @@ make O=out ARCH=arm64 aegis_defconfig
 PATH="/home/wahyu/proton-clang/bin:${PATH}" \
                             make -j$(nproc --all) O=out \
 			    CROSS_COMPILE=aarch64-linux-gnu- \
-                            CC=clang-13 \
+                            CC=clang \
                             AR=llvm-ar \
                             AS=llvm-as \
                             NM=llvm-nm \
@@ -22,4 +22,3 @@ PATH="/home/wahyu/proton-clang/bin:${PATH}" \
                             HOSTAR=llvm-ar \
                             CLANG_TRIPLE=aarch64-linux-gnu- \
                             2>&1 | tee log.jancok
-© 2021 GitHub, Inc.
